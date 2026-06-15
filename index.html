@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+  <html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON ACCESSORY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--header-->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-bolt me-2" style="color:var(--neon-red);"></i> IRON
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <button class="nav-icon-btn position-relative" onclick="toggleCart()">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <a href="auth.html" class="nav-icon-btn"><i class="fas fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--main-->
+
+  <main>
+
+      <section class="main-back position-relative">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <div class="main-tag d-inline-block">2026 COLLECTION</div>
+              <h1 class="main-title mb-0"><span class="text-red">IRON</span></h1>
+              <h2 class="main-sub-title">ACCESSORY</h2>
+              <p class="main-desc">محصولاتی خاص برای افراد خاص</p>
+              <div class="d-flex gap-3 mt-5 flex-wrap align-items-center">
+                <a href="shop.html" class="cta-dark btn rounded-2" >کالکشن کامل</a>
+                <a href="shop.html?filter=limited" class="btn btn-outline-light rounded-2 px-4 p-2">LIMITED EDITION →</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center hero-icon-wrap">
+              <div class="main-skull-fx position-relative d-inline-block">
+                <i class="fas fa-skull main-skull"></i>
+                <div class="skull-ring r1"></div>
+                <div class="skull-ring r2"></div>
+                <div class="skull-ring r3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <section>
+     <div class="marquee-wrap overflow-hidden">
+        <div class="marquee-track d-inline-flex text-black fw-bold">
+          <span>IRON ACCESSORY &nbsp;/&nbsp; DARK COLLECTION &nbsp;/&nbsp; FREE SHIP OVER $200 &nbsp;/&nbsp; SPECIAL</span>
+          <span>IRON ACCESSORY &nbsp;/&nbsp; DARK COLLECTION &nbsp;/&nbsp; FREE SHIP OVER $200 &nbsp;/&nbsp; SPECIAL</span>
+        </div>
+      </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CATEGORIES</span>
+        <h2 class="section-title">BROWSE BY TYPE</h2>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=ring" class="cat-card rounded-2">
+            <img src="images/ring.webp" class="img-fluid w-25" alt="ring highlight">
+            <span>RINGS</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=chain" class="cat-card rounded-2">
+            <img src="images/chain.png" class="img-fluid w-25" alt="chain-highlight">
+            <span>CHAINS</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=belt" class="cat-card rounded-2">
+            <img src="images/belt.png" class="img-fluid w-25" alt="belt-highlight">
+            <span>BELTS</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=watch" class="cat-card rounded-2">
+            <img src="images/watch.png" class="img-fluid w-25" alt="watch-highlight">
+            <span>WATCHES</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=cap" class="cat-card rounded-2">
+            <img src="images/cap.png" class="img-fluid w-25" alt="cap-highlight">
+            <span>CAPS</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="shop.html?cat=set" class="cat-card rounded-2">
+            <img src="images/set.png" class="img-fluid w-25" alt="set-highlight">
+            <span>SETS</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">HOT PICKS</span>
+        <h2 class="section-title">FEATURED DROPS</h2>
+      </div>
+      <div class="row g-4 mt-2" id="featuredGrid"></div>
+      <div class="text-center mt-5">
+        <a href="shop.html" class="cta-dark btn">VIEW ALL PRODUCTS</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="promo-banner">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <h2 class="banner-text"><i class="fas fa-bolt ms-3 text-red"></i>تا 40% تخفیف ویژه سایت</h2>
+      <div class="d-flex align-items-center gap-3">
+        <span class="promo-code">LASH2025</span>
+        <button class="cta-dark btn" onclick="copyCode()">کپی کد</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-truck fa-2x text-cyan"></i>
+            <h5>ارسال سریع</h5>
+            <p>۲۴ ساعته با بسته‌بندی مشکی ضدآب</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-shield-halved fa-2x text-gold"></i>
+            <h5>ضمانت اصالت</h5>
+            <p>استیل آلمانی و نقره ۹۲۵</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-rotate-left fa-2x text-red"></i>
+            <h5>یک ماه گارانتی</h5>
+            <p>بدون سوال، بدون دردسر</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!--footer-->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <i class="fas fa-bolt text-red"></i> <span class="ms-5">IRON ACCESSORY</span>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/enwo_web"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/enwo_web"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">SHOP</h6>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?cat=ring">Rings</a></li>
+            <li><a href="shop.html?cat=chain">Chains</a></li>
+            <li><a href="shop.html?cat=set">Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">INFO</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="auth.html">login / sign-up</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">خبرنامه</h6>
+          <p class="text-dim">با فرستادن ایمیل خود برای ما از جدید ترین اخبار سایت با خبرشو</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="ایمیل شما" class="newsletter-input">
+            <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© IRON ACC — enwo_web</span>
+        <span>سایت دمو و آزمایشی</span>
+      </div>
+    </div>
+  </footer>
+
+  <!--background main css-->
+  <div class="grid-background"></div>
+  <div class="floating-debris">
+    <div class="debris" style="width:350px;height:350px;top:10%;left:5%;"></div>
+    <div class="debris" style="width:500px;height:500px;bottom:0;right:0;animation-delay:-5s;"></div>
+    <div class="debris" style="width:200px;height:200px;top:60%;left:70%;animation-delay:-12s;"></div>
+  </div>
+
+
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h5>CART |     <span id="cartItemCount">0</span> ITEMS</h5>
+      <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-bag fa-3x text-dim"></i>
+        <p>سبد خرید خالیه!</p>
+      </div>
+      <div id="cartItems"></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total-row">
+        <span>جمع کل:</span>
+        <span class="cart-total-price" id="cartTotal">$0</span>
+      </div>
+      <div class="promo-input-wrap">
+        <input type="text" placeholder="کد تخفیف" id="promoInput" class="promo-input">
+        <button onclick="applyPromo()" class="promo-apply-btn">اعمال</button>
+      </div>
+      <div class="discount-row" id="discountRow" style="display:none;">
+        <span class="text-dim">تخفیف (۴۰٪):</span>
+        <span class="text-red" id="discountAmt"></span>
+      </div>
+      <a href="checkout.html" class="cta-dark btn w-100 mt-3 text-center">CHECKOUT</a>
+      <button onclick="clearCart()" class="btn-clear-cart mt-2">پاک کردن سبد</button>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('featuredGrid');
+      const featured = PRODUCTS.filter(p => p.featured).slice(0, 6);
+      featured.forEach(p => {
+        grid.innerHTML += buildProductCard(p);
+      });
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>

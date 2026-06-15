@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON ACCESSORY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-background"></div>
+    
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-bolt me-2" style="color:var(--neon-red);"></i> IRON</a>
+      </div>
+    </nav>
+    
+    <div class="page-hero">
+      <div class="container">
+        <span class="section-tag">SECURE CHECKOUT</span>
+        <h1 class="hero-title mt-3">TAKE <span class="text-red">THEM</span></h1>
+      </div>
+    </div>
+    
+    <div class="container py-5">
+    
+      <div class="step-indicator mb-5">
+        <div class="step active" id="step1Ind">1- اطلاعات</div>
+        <div class="step" id="step2Ind">2- ارسال</div>
+        <div class="step" id="step3Ind">3- پرداخت</div>
+        <div class="step" id="step4Ind">4- تأیید</div>
+      </div>
+    
+      <div class="checkout-grid">
+        <div>
+          <div id="step1">
+            <div class="checkout-section">
+              <h5><i class="fas fa-user me-2 text-red"></i> اطلاعات تماس</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-field"><label>نام</label><input type="text" id="co_first" placeholder="نام"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field"><label>نام خانوادگی</label><input type="text" id="co_last" placeholder="نام خانوادگی"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field"><label>ایمیل</label><input type="email" id="co_email" placeholder="example@gmail.com"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field"><label>موبایل</label><input type="tel" id="co_phone" placeholder="09xxxxxxxxx"></div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-section">
+              <h5><i class="fas fa-map-marker-alt me-2 text-red"></i> آدرس ارسال</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-field">
+                    <label>استان</label>
+                    <select class="sort-select w-100" id="co_state">
+                      <option value="">انتخاب استان</option>
+                      <option>تهران</option><option>اصفهان</option><option>مشهد</option>
+                      <option>شیراز</option><option>تبریز</option><option>کرج</option>
+                      <option>قم</option><option>اهواز</option><option>سایر</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field"><label>شهر</label><input type="text" id="co_city" placeholder="شهر"></div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field"><label>آدرس کامل</label><input type="text" id="co_addr" placeholder="خیابان، کوچه، پلاک، واحد"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field"><label>کد پستی</label><input type="text" id="co_zip" placeholder="کد پستی ۱۰ رقمی"></div>
+                </div>
+              </div>
+            </div>
+            <button class="cta-dark btn w-100" onclick="goStep(2)">ادامه — روش ارسال <i class="fas fa-arrow-left ms-2"></i></button>
+          </div>
+        
+          <div id="step2" style="display:none;">
+            <div class="checkout-section">
+              <h5><i class="fas fa-truck me-2 text-red"></i> روش ارسال</h5>
+              <div id="shippingOptions">
+                <label class="payment-method selected" id="ship_express">
+                  <input type="radio" name="shipping" value="express" checked onchange="selectShipping(this)">
+                  <div>
+                    <div class="fw-bold">ارسال پیشتاز ۲۴ ساعته</div>
+                    <div class="text-dim small">تضمین تحویل در ۲۴ ساعت کاری</div>
+                  </div>
+                  <div class="fw-bold me-auto text-gold">$15</div>
+                </label>
+                <label class="payment-method" id="ship_normal">
+                  <input type="radio" name="shipping" value="normal" onchange="selectShipping(this)">
+                  <div>
+                    <div class="fw-bold">ارسال معمولی ۳-۵ روز</div>
+                    <div class="text-dim small">پست پیشنهادی با بسته‌بندی مشکی</div>
+                  </div>
+                  <div class="fw-bold me-auto text-cyan">$7</div>
+                </label>
+                <label class="payment-method" id="ship_free">
+                  <input type="radio" name="shipping" value="free" onchange="selectShipping(this)">
+                  <div>
+                    <div class="fw-bold">ارسال رایگان +$200</div>
+                    <div class="text-dim small">برای سفارش‌های بالای ۲۰۰ دلار</div>
+                  </div>
+                  <div class="fw-bold me-auto" style="color:var(--neon-red);">FREE</div>
+                </label>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <button class="btn btn-outline-secondary rounded-0 px-4" onclick="goStep(1)"><i class="fas fa-arrow-right me-2"></i> قبلی</button>
+              <button class="cta-dark btn flex-grow-1" onclick="goStep(3)">ادامه — پرداخت <i class="fas fa-arrow-left ms-2"></i></button>
+            </div>
+          </div>
+        
+          <div id="step3" style="display:none;">
+            <div class="checkout-section">
+              <h5><i class="fas fa-credit-card me-2 text-red"></i> روش پرداخت</h5>
+              <label class="payment-method selected" id="pay_card">
+                <input type="radio" name="payment" value="card" checked onchange="selectPay(this)">
+                <i class="fas fa-credit-card fa-lg text-cyan"></i>
+                <div>
+                  <div class="fw-bold">پرداخت آنلاین (کارت‌های شتاب)</div>
+                  <div class="text-dim small">درگاه امن زرین‌پال</div>
+                </div>
+              </label>
+              <label class="payment-method" id="pay_wallet">
+                <input type="radio" name="payment" value="wallet" onchange="selectPay(this)">
+                <i class="fas fa-wallet fa-lg text-gold"></i>
+                <div>
+                  <div class="fw-bold">کیف پول آیرون</div>
+                  <div class="text-dim small">موجودی: $0.00</div>
+                </div>
+              </label>
+              <label class="payment-method" id="pay_crypto">
+                <input type="radio" name="payment" value="crypto" onchange="selectPay(this)">
+                <i class="fab fa-bitcoin fa-lg" style="color:var(--neon-gold);"></i>
+                <div>
+                  <div class="fw-bold">رمزارز (BTC / ETH / USDT)</div>
+                  <div class="text-dim small">پرداخت ناشناس</div>
+                </div>
+              </label>
+            </div>
+          
+            <div class="checkout-section" id="cardDetails">
+              <h5><i class="fas fa-lock me-2 text-cyan"></i> اطلاعات کارت</h5>
+              <div class="form-field"><label>شماره کارت</label>
+                <input type="text" id="co_card" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCard(this)">
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6"><div class="form-field"><label>تاریخ انقضا</label><input type="text" placeholder="MM/YY" maxlength="5" oninput="formatExp(this)" id="co_exp"></div></div>
+                <div class="col-md-6"><div class="form-field"><label>CVV2</label><input type="password" placeholder="•••" maxlength="4" id="co_cvv"></div></div>
+              </div>
+              <div class="form-field"><label>نام صاحب کارت</label><input type="text" id="co_cardname" placeholder="نام روی کارت"></div>
+            </div>
+          
+            <div class="d-flex gap-3">
+              <button class="btn btn-outline-secondary rounded-0 px-4" onclick="goStep(2)"><i class="fas fa-arrow-right me-2"></i> قبلی</button>
+              <button class="cta-dark btn flex-grow-1" onclick="doPayment()">
+                <i class="fas fa-lock me-2"></i> پرداخت امن
+              </button>
+            </div>
+          </div>
+        
+          <div id="step4" style="display:none; text-align:center; padding: 60px 20px;">
+            <div style="font-size:80px; margin-bottom:20px;">🔥</div>
+            <div class="section-tag mb-3">ORDER CONFIRMED</div>
+            <h2 style="font-family:'Bebas Neue';font-size:3rem;letter-spacing:6px;">سفارش تأیید شد!</h2>
+            <p class="text-dim mt-3">شماره سفارش: <span class="text-red fw-bold" id="orderNum"></span></p>
+            <p class="text-dim">پیامک تأیید به زودی ارسال می‌شه. ممنون از اعتماد شما! 🤘</p>
+            <div class="d-flex gap-3 justify-content-center mt-5">
+              <a href="index.html" class="cta-dark btn">بازگشت به خانه</a>
+              <a href="shop.html" class="btn btn-outline-light rounded-0 px-4">ادامه خرید</a>
+            </div>
+          </div>
+        </div>
+      
+        <div>
+          <div class="checkout-section" id="orderSummaryBox">
+            <h5><i class="fas fa-receipt me-2 text-red"></i> خلاصه سفارش</h5>
+            <div id="orderItems"></div>
+            <div class="order-summary-item mt-2">
+              <span class="text-dim">جمع محصولات:</span>
+              <span id="sumSubtotal">$0</span>
+            </div>
+            <div class="order-summary-item" id="sumDiscountRow" style="display:none;">
+              <span class="text-dim">تخفیف:</span>
+              <span class="text-red" id="sumDiscount"></span>
+            </div>
+            <div class="order-summary-item">
+              <span class="text-dim">ارسال:</span>
+              <span id="sumShipping">$15</span>
+            </div>
+            <div class="order-total-row">
+              <span>جمع کل:</span>
+              <span class="text-gold" id="sumTotal">$0</span>
+            </div>
+            <div class="mt-4 d-flex align-items-center gap-2" style="font-size:0.8rem;color:var(--text-dim);">
+              <i class="fas fa-lock text-cyan"></i> پرداخت با SSL 256-bit رمزنگاری‌شده
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script>
+      let currentStep = 1;
+      let shippingCost = 15;
+    
+      function goStep(n) {
+        if (n === 2 && !validateStep1()) return;
+      
+        [1,2,3,4].forEach(i => {
+          document.getElementById('step' + i).style.display = 'none';
+          const ind = document.getElementById('step' + i + 'Ind');
+          ind.classList.remove('active','done');
+          if (i < n) ind.classList.add('done');
+        });
+        document.getElementById('step' + n).style.display = 'block';
+        document.getElementById('step' + n + 'Ind').classList.add('active');
+        currentStep = n;
+        updateSummary();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    
+      function validateStep1() {
+        const fields = ['co_first','co_email','co_phone','co_addr'];
+        let ok = true;
+        fields.forEach(f => {
+          const el = document.getElementById(f);
+          if (!el.value.trim()) { el.style.borderColor = 'var(--neon-red)'; ok = false; }
+          else el.style.borderColor = '';
+        });
+        if (!ok) showToast('لطفاً همه فیلدها را پر کن!', 'error');
+        return ok;
+      }
+    
+      function selectShipping(radio) {
+        document.querySelectorAll('#shippingOptions .payment-method').forEach(l => l.classList.remove('selected'));
+        radio.closest('.payment-method').classList.add('selected');
+        shippingCost = radio.value === 'free' ? 0 : radio.value === 'normal' ? 7 : 15;
+        updateSummary();
+      }
+    
+      function selectPay(radio) {
+        document.querySelectorAll('[name="payment"]').forEach(r => r.closest('.payment-method').classList.remove('selected'));
+        radio.closest('.payment-method').classList.add('selected');
+        document.getElementById('cardDetails').style.display = radio.value === 'card' ? 'block' : 'none';
+      }
+    
+      function formatCard(el) {
+        let v = el.value.replace(/\D/g,'').slice(0,16);
+        el.value = v.replace(/(.{4})/g,'$1 ').trim();
+      }
+      function formatExp(el) {
+        let v = el.value.replace(/\D/g,'').slice(0,4);
+        if (v.length >= 3) v = v.slice(0,2) + '/' + v.slice(2);
+        el.value = v;
+      }
+    
+      function updateSummary() {
+        const items = JSON.parse(localStorage.getItem('ironCart') || '[]');
+        const container = document.getElementById('orderItems');
+        if (!container) return;
+      
+        container.innerHTML = items.map(i => `
+          <div class="order-summary-item">
+            <span>${i.name} × ${i.qty}</span>
+            <span>$${(i.price * i.qty).toFixed(0)}</span>
+          </div>
+        `).join('');
+        
+        const subtotal = items.reduce((s,i) => s + i.price * i.qty, 0);
+        const disc = localStorage.getItem('ironDiscount') === '1' ? subtotal * 0.4 : 0;
+        const total = subtotal - disc + shippingCost;
+        
+        document.getElementById('sumSubtotal').textContent = '$' + subtotal.toFixed(0);
+        document.getElementById('sumShipping').textContent = shippingCost === 0 ? 'رایگان' : '$' + shippingCost;
+        document.getElementById('sumTotal').textContent = '$' + total.toFixed(0);
+        
+        if (disc > 0) {
+          document.getElementById('sumDiscountRow').style.display = 'flex';
+          document.getElementById('sumDiscount').textContent = '-$' + disc.toFixed(0);
+        }
+      }
+    
+      function doPayment() {
+        const card = document.getElementById('co_card').value.replace(/\s/g,'');
+        const payMethod = document.querySelector('[name="payment"]:checked')?.value;
+      
+        if (payMethod === 'card') {
+          if (card.length < 16) { showToast('شماره کارت ناقصه!', 'error'); return; }
+          if (!document.getElementById('co_exp').value) { showToast('تاریخ انقضا وارد کن!', 'error'); return; }
+        }
+      
+        const btn = event.target;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> در حال پردازش...';
+        btn.disabled = true;
+      
+        setTimeout(() => {
+          const orderNum = 'IRN-' + Date.now().toString().slice(-6);
+          document.getElementById('orderNum').textContent = orderNum;
+        
+          localStorage.removeItem('ironCart');
+          localStorage.removeItem('ironDiscount');
+        
+          goStep(4);
+        }, 2500);
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        updateSummary();
+        updateCartUI();
+      
+        const cart = JSON.parse(localStorage.getItem('ironCart') || '[]');
+        if (cart.length === 0 && window.location.pathname.includes('checkout')) {
+          showToast('سبد خریدت خالیه!', 'warning');
+          setTimeout(() => window.location.href = 'shop.html', 2000);
+        }
+      
+        const user = JSON.parse(localStorage.getItem('ironUser') || 'null');
+        if (user) {
+          if (document.getElementById('co_email')) document.getElementById('co_email').value = user.email || '';
+          if (document.getElementById('co_first')) document.getElementById('co_first').value = user.name || '';
+        }
+      });
+    </script>
+</body>
+</html>

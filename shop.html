@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON ACCESSORY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--header-->
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-bolt me-2" style="color:var(--neon-red);"></i> IRON</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link active" href="shop.html">SHOP</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <button class="nav-icon-btn position-relative" onclick="toggleCart()">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="auth.html" class="nav-icon-btn"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+  </nav>
+</header>
+
+<!--main-->
+<main>
+
+    <div class="page-hero">
+  <div class="container">
+    <span class="section-tag">IRON ACCESSORY</span>
+    <h1 class="hero-title mt-3">THE <span class="text-red">CAGE</span></h1>
+    <p>محصولات خود را پیدا کنید</p>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
+    <div class="filter-wrap" style="justify-content:flex-start; padding:0;">
+      <button class="filter-btn active" data-cat="all">همه</button>
+      <button class="filter-btn" data-cat="ring">انگشتر</button>
+      <button class="filter-btn" data-cat="chain">گردنبند</button>
+      <button class="filter-btn" data-cat="belt">کمربند</button>
+      <button class="filter-btn" data-cat="watch">ساعت</button>
+      <button class="filter-btn" data-cat="cap">کلاه</button>
+      <button class="filter-btn" data-cat="set">ست</button>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span class="text-dim small" id="productCount"></span>
+      <select class="sort-select rounded-2" id="sortSelect" onchange="applyFilters()">
+        <option value="default">مرتب‌سازی</option>
+        <option value="price-asc">ارزان‌ترین</option>
+        <option value="price-desc">گران‌ترین</option>
+        <option value="rating">بهترین امتیاز</option>
+        <option value="newest">جدیدترین</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<section class="container pb-5">
+  <div class="row g-4" id="shopGrid"></div>
+  <div class="text-center py-5" id="noResults" style="display:none;">
+    <i class="fas fa-skull fa-3x text-dim mb-3"></i>
+    <p class="text-dim">هیچ محصولی پیدا نشد!</p>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="product-modal" id="productModal">
+  <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+  <div id="modalContent"></div>
+</div>
+
+</main>
+
+
+
+<!--footer-->
+<footer class="footer-dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <i class="fas fa-bolt text-red"></i> <span class="ms-5">IRON ACCESSORY</span>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/enwo_web"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/enwo_web"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">SHOP</h6>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?cat=ring">Rings</a></li>
+            <li><a href="shop.html?cat=chain">Chains</a></li>
+            <li><a href="shop.html?cat=set">Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">INFO</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="auth.html">login / sign-up</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">خبرنامه</h6>
+          <p class="text-dim">با فرستادن ایمیل خود برای ما از جدید ترین اخبار سایت با خبرشو</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="ایمیل شما" class="newsletter-input">
+            <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© IRON ACC — enwo_web</span>
+        <span>سایت دمو و آزمایشی</span>
+      </div>
+    </div>
+</footer>
+
+<!--background css main-->
+<div class="grid-background"></div>
+<div class="floating-debris">
+  <div class="debris" style="width:300px;height:300px;top:20%;left:10%;"></div>
+  <div class="debris" style="width:400px;height:400px;bottom:10%;right:5%;animation-delay:-8s;"></div>
+</div>
+
+
+
+<!--bucket-->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h5>CART |     <span id="cartItemCount">0</span> ITEMS</h5>
+    <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty"><i class="fas fa-shopping-bag fa-3x text-dim"></i><p>سبد خرید خالیه!</p></div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total-row"><span>جمع کل:</span><span class="cart-total-price" id="cartTotal">$0</span></div>
+    <div class="promo-input-wrap">
+      <input type="text" placeholder="کد تخفیف" id="promoInput" class="promo-input">
+      <button onclick="applyPromo()" class="promo-apply-btn">اعمال</button>
+    </div>
+    <div class="discount-row" id="discountRow" style="display:none;">
+      <span class="text-dim">تخفیف (۴۰٪):</span><span class="text-red" id="discountAmt"></span>
+    </div>
+    <a href="checkout.html" class="cta-dark btn w-100 mt-3 text-center">CHECKOUT</a>
+    <button onclick="clearCart()" class="btn-clear-cart mt-2">پاک کردن سبد</button>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="script.js"></script>
+<script>
+  let currentCat = 'all';
+
+  function applyFilters() {
+    const sort = document.getElementById('sortSelect').value;
+    let items = [...PRODUCTS];
+
+    const urlCat = new URLSearchParams(location.search).get('cat');
+    if (urlCat && currentCat === 'all') currentCat = urlCat;
+
+    if (currentCat !== 'all') items = items.filter(p => p.cat === currentCat);
+
+    const urlFilter = new URLSearchParams(location.search).get('filter');
+    if (urlFilter === 'limited') items = items.filter(p => p.badge && p.badge.includes('LIMITED'));
+
+    if (sort === 'price-asc') items.sort((a,b) => a.price - b.price);
+    else if (sort === 'price-desc') items.sort((a,b) => b.price - a.price);
+    else if (sort === 'rating') items.sort((a,b) => b.rating - a.rating);
+
+    const grid = document.getElementById('shopGrid');
+    const none = document.getElementById('noResults');
+    const count = document.getElementById('productCount');
+
+    grid.innerHTML = items.map(p => buildProductCard(p)).join('');
+    none.style.display = items.length === 0 ? 'block' : 'none';
+    count.textContent = `${items.length} محصول`;
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentCat = this.dataset.cat;
+      applyFilters();
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlCat = new URLSearchParams(location.search).get('cat');
+    if (urlCat) {
+      currentCat = urlCat;
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.cat === urlCat);
+      });
+    }
+    applyFilters();
+    updateCartUI();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON ACCESSORY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+    <!--header-->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-bolt me-2" style="color:var(--neon-red);"></i> IRON</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+          </ul>
+          <div class="d-flex gap-3 align-items-center">
+            <button class="nav-icon-btn position-relative" onclick="toggleCart()">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <a href="auth.html" class="nav-icon-btn"><i class="fas fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </header>
+    
+    <!--main-->
+    <main>
+
+      <section class="section-dark">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <span class="section-tag">?WHO WE ARE</span>
+            <h2 class="section-title mt-3">DEMO <span class="text-red">SITE</span></h2>
+            <p style="color:var(--text-dim);font-size:1.05rem;line-height:1.9;margin-top:20px;">
+              آیرون اکسسوری یک سایت برای نمونه کار و صرفا فقط یک سایت دمو برای نشان دادن تجربه enwo web در زمینه طراحی سایت و توسعه وب است
+            </p>
+            <div class="d-flex gap-4 mt-4 flex-wrap">
+              <div style="border-right: 3px solid var(--neon-red); padding-right: 20px;">
+                <div style="font-family:'Bebas Neue';font-size:2.5rem;color:var(--neon-red);">۳۱۶L</div>
+                <div class="text-dim" style="font-size:0.8rem;letter-spacing:2px;">GRADE STEEL</div>
+              </div>
+              <div style="border-right: 3px solid var(--neon-cyan); padding-right: 20px;">
+                <div style="font-family:'Bebas Neue';font-size:2.5rem;color:var(--neon-cyan);">۹۲۵</div>
+                <div class="text-dim" style="font-size:0.8rem;letter-spacing:2px;">SILVER GRADE</div>
+              </div>
+              <div style="border-right: 3px solid var(--neon-gold); padding-right: 20px;">
+                <div style="font-family:'Bebas Neue';font-size:2.5rem;color:var(--neon-gold);">PVD</div>
+                <div class="text-dim" style="font-size:0.8rem;letter-spacing:2px;">COATING TECH</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div style="padding:60px;text-align:center;">
+              <i class="fas fa-skull" style="font-size:120px;color:var(--neon-silver);opacity:0.3;filter:drop-shadow(0 0 30px var(--neon-red));"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--stats-->
+    <div style="padding:60px 0;">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="about-stat">
+              <div class="about-stat-num">+۲k</div>
+              <div class="about-stat-label">مشتری راضی</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="about-stat">
+              <div class="about-stat-num">۱۲۰+</div>
+              <div class="about-stat-label">طرح منحصربه‌فرد</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="about-stat">
+              <div class="about-stat-num">۴.۹</div>
+              <div class="about-stat-label">امتیاز میانگین</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="about-stat">
+              <div class="about-stat-num">۳۱+</div>
+              <div class="about-stat-label">شهر های ارسالی</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">OUR VALUES</span>
+          <h2 class="section-title">WHAT WE STAND FOR</h2>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <i class="fas fa-gem fa-2x text-cyan"></i>
+              <h5>کیفیت بی نظیر</h5>
+              <p>همه قطعات در بهترین کیفیت بسته بندی میشود</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card" style="border-right-color:var(--neon-cyan);">
+              <i class="fas fa-recycle fa-2x text-gold"></i>
+              <h5>تولید مسئولانه</h5>
+              <p>ضایعات صفر. بسته‌بندی ۱۰۰٪ بازیافتی. محیط زیست مهمه</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card" style="border-right-color:var(--neon-gold);">
+              <i class="fas fa-handshake fa-2x text-red"></i>
+              <h5>رضایت شما</h5>
+              <p>قبل از قیمت به فکر رضایت شما هستیم</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+    
+    <!--footer-->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <i class="fas fa-bolt text-red"></i> <span class="ms-5">IRON ACCESSORY</span>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/enwo_web"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/enwo_web"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">SHOP</h6>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?cat=ring">Rings</a></li>
+            <li><a href="shop.html?cat=chain">Chains</a></li>
+            <li><a href="shop.html?cat=set">Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 class="footer-heading">INFO</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="auth.html">login / sign-up</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">خبرنامه</h6>
+          <p class="text-dim">با فرستادن ایمیل خود برای ما از جدید ترین اخبار سایت با خبرشو</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="ایمیل شما" class="newsletter-input">
+            <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© IRON ACC — enwo_web</span>
+        <span>سایت دمو و آزمایشی</span>
+      </div>
+    </div>
+  </footer>
+
+    <!--background css main-->
+    <div class="grid-background"></div>
+    <div class="floating-debris">
+      <div class="debris" style="width:400px;height:400px;top:10%;right:5%;animation-delay:-5s;"></div>
+    </div>
+    
+    <!--bucket-->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h5>CART |     <span id="cartItemCount">0</span> ITEMS</h5>
+        <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cart-body"><div class="cart-empty" id="cartEmpty"><i class="fas fa-shopping-bag fa-3x text-dim"></i><p>سبد خرید خالیه!</p></div><div id="cartItems"></div></div>
+      <div class="cart-footer" id="cartFooter" style="display:none;">
+        <div class="cart-total-row"><span>جمع کل:</span><span class="cart-total-price" id="cartTotal">$0</span></div>
+        <a href="checkout.html" class="cta-dark btn w-100 mt-3 text-center">CHECKOUT</a>
+        <button onclick="clearCart()" class="btn-clear-cart mt-2">پاک کردن سبد</button>
+      </div>
+    </div>
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
