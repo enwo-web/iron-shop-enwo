@@ -1,7 +1,7 @@
 const PRODUCTS = [
   {
     id: 1, name: "Chrome Hearts", cat: "ring", price: 89,
-    badge: "LIMITED 1/50", badgeColor: "red",
+    badge: "LIMITED", badgeColor: "red",
     image: "https://cdn.snkrdunk.com/upload_bg_removed/CHA-0678.webp?size=l",
     featured: true, inStock: true, rating: 4.9, reviews: 245
   },
