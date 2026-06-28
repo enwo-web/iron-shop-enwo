@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./iron-shop-logo.png" width="180" alt="IRON SHOP Logo"/>
+<img src="./enwo-web.png" width="180" alt="ENWO WEB Logo"/>
 
 # IRON SHOP
 
@@ -42,23 +42,6 @@
 
 ---
 
-# 🛠️ تکنولوژی‌های استفاده شده
-
-- HTML5
-- CSS3
-- Bootstrap
-- JavaScript
-- Responsive Design
-
----
-
-<div align="center">
-
-## 🌐 Live Demo
-
-**https://enwo-web.github.io/iron-shop**
-
-<br>
 
 ## 📡 ارتباط با ما
 
@@ -78,8 +61,3 @@
 
 ⭐ اگر این پروژه را دوست داشتی، فراموش نکن به آن Star بدهی.
 
-<br><br>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0d0d0d,50:6f6f6f,100:0d0d0d&text=IRON%20SHOP&fontColor=ffffff&fontSize=42&fontAlignY=70&animation=fadeIn"/>
-
-</div>
